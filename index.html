@@ -3346,10 +3346,10 @@ function createContest() {
   var id = 'c_' + Date.now();
   contests.push({ id:id, name:name, emoji:emoji, hunks:[], history:[] });
   saveContests();
-  // Close form
   if (nameEl) nameEl.value = '';
   var f = document.getElementById('new-contest-form');
   if (f) f.style.display = 'none';
+  renderContestList();
   var newIdx = contests.length - 1;
   openContestPage(newIdx);
 }
